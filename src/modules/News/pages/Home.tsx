@@ -25,7 +25,7 @@ import getQueryParams, {
 import EmptyState from '../../../components/EmptyState';
 
 const Home: React.FC = () => {
-  const local: boolean = true;
+  const local: boolean = false;
 
   const [query, setQuery] = useState<string>('');
   const [page, setPage] = useState<number>(1);
