@@ -1,0 +1,189 @@
+/* Typhography */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+
+/* Boostrap Variable Overrides */
+
+$font-family-base: "Source Sans Pro", sans-serif;
+$purple:#4829B2;
+$primary: $purple;
+
+/* Bootstrap import */
+
+@import '~bootstrap/scss/bootstrap';
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Colors */
+
+.bg-purple {
+  background: #6a3093;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, $purple, #6a3093);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, $purple, #6a3093); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/* Gradients */
+
+.bg-gradient-placeholder {
+  animation-duration: 1.8s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: #f6f7f8;
+  background: linear-gradient(to right, #efefef 8%, #f4f4f4 38%, #efefef 54%);
+  background-size: 1000px 640px;
+  
+  position: relative;
+  
+}
+
+@keyframes placeHolderShimmer{
+  0%{
+      background-position: -468px 0
+  }
+  100%{
+      background-position: 468px 0
+  }
+}
+
+/* Layers Background */
+
+.layers-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 40;
+}
+
+.pattern::before {
+  width: 80vw;
+  height: 80vw;
+  bottom: -40vw;
+  left: 25vw;
+}
+
+.pattern::after {
+  width: 60vw;
+  height: 60vw;
+  bottom: -30vw;
+  left: 80vw;
+}
+
+.bg-white-60 {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Positioning */
+
+.top-0 {
+  top: 0;
+} 
+
+.top-1-2 {
+  top: 50%;
+}
+
+.left-0 {
+  left: 0;
+} 
+
+.right-0 {
+  right: 0;
+}
+
+.right-117 {
+  right: 117px;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+/* Transform */
+
+.translate-y--1-2 {
+  transform: translateY(-50%);
+}
+
+/* Sizing */
+
+.h-200 {
+  height: 200px;
+}
+
+.h-400 {
+  height: 400px;
+}
+
+.min-h-200 {
+  min-height: 200px;
+}
+
+/* Object Fit */
+
+.object-cover {
+  object-fit: cover;
+}
+
+/* z-index */
+
+.z-index-10 {
+  z-index: 10;
+}
+
+/* Box Shadow Effect */
+
+.box-shadow {
+  box-shadow: 0 7px 10px -10px rgba(150,170,180,0.5);
+  transition: box-shadow 0.5s ease;
+}
+
+.box-shadow:hover {
+  box-shadow: 0 7px 30px -10px rgba(150,170,180,0.5);
+}
+
+/* React Transition Group */
+
+.modal-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.modal-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.modal-exit {
+  opacity: 1;
+}
+
+.modal-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
