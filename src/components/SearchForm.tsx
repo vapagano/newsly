@@ -41,7 +41,7 @@ const SearchForm: React.FC<ISearchForm> = ({
       }}
     >
       {({ touched, errors, isSubmitting, isValid }) => (
-        <Form className="form-inline mb-4 align-items-start">
+        <Form className="form-inline mb-4 d-block">
           <div className="input-group w-100 position-relative">
             <Field
               name="query"

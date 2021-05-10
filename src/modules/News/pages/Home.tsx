@@ -80,10 +80,10 @@ const Home: React.FC = () => {
     <>
       <Spinner loading={loading} />
 
-      <div className="bg-purple p-5 h-400 d-flex align-items-center mb-5">
+      <div className="bg-purple p-2 p-md-5 h-540 d-flex align-items-center mb-5">
         <div className="container">
-          <div className="row w-100">
-            <div className="col-10 offset-1 col-md-8 offset-md-2">
+          <div className="row">
+            <div className="col-12 col-md-8 offset-md-2">
               <Header />
               <SearchForm parentCallback={handleSearch} initialValue={query} />
             </div>
