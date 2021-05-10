@@ -154,7 +154,7 @@ html {
 
 /* Hover */
 img[class^="card-img"] {
-  transition: all 0.7s ease;
+  transition: all 0.7s ease !important;
 }
 
 .img-hover:hover {
