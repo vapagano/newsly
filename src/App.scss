@@ -152,6 +152,17 @@ html {
   box-shadow: 0 7px 30px -10px rgba(150,170,180,0.5);
 }
 
+/* Hover */
+img[class^="card-img"] {
+  transition: all 0.7s ease;
+}
+
+.img-hover:hover {
+  img[class^="card-img"] {
+    transform: scale(1.1) rotate(2deg);
+  }
+}
+
 /* React Transition Group */
 
 .modal-enter {

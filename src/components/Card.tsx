@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useModal from '../hooks/useModal';
 import { truncate } from '../services/stringService';
 import Modal from './Modal';
@@ -21,11 +21,21 @@ const Card: React.FC<ICardProps> = ({
   loading
 }) => {
   const { isShowing, toggle } = useModal();
+  const [endLoading, setEndLoading] = useState();
 
+ /*  useEffect(() => {
+    if (loading) {
+      set
+    }
+    return () => {
+      cleanup
+    }
+  }, [input])
+ */
   return (
     <>
-      <div className="card w-100 box-shadow">
-      {imageSrc && <div onClick={toggle} className="overflow-hidden relative h-200 bg-gradient-placeholder">{!loading && <img src={imageSrc} className="card-img-top object-cover w-100 h-100" alt={imageAlt} /> }</div>}
+      <div className="card w-100 box-shadow img-hover">
+      {imageSrc && <div onClick={toggle} className="overflow-hidden relative h-200 bg-gradient-placeholder">{<img src={imageSrc} className="card-img-top object-cover w-100 h-100" alt={imageAlt} /> }</div>}
         <div className="card-body d-flex flex-column flex-fill justify-content-between">
           <div className="mb-3">
             <h5 className="card-title">{title}</h5>
